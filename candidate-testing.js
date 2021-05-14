@@ -30,7 +30,7 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers) {
-
+    
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(`Candidate Name: ${candidateName}`);
 
@@ -46,7 +46,7 @@ console.log(`Candidate Name: ${candidateName}`);
     console.log(`Correct Answer: ${correctAnswers[i]} \n`);
   }
 
-console.log(`>>> Overall Grade: ${numberCorrect / candidateAnswers.length * 100}% (${candidateAnswers.length} of ${correctAnswers.length} responses correct) <<<`);
+console.log(`>>> Overall Grade: ${numberCorrect / candidateAnswers.length * 100}% (${numberCorrect} of ${correctAnswers.length} responses correct) <<<`);
 
 if ((numberCorrect / candidateAnswers.length * 100) >= 80) {
     console.log(">>> Status: PASSED <<<");
@@ -54,7 +54,7 @@ if ((numberCorrect / candidateAnswers.length * 100) >= 80) {
     console.log(">>> Status: FAILED <<<");
 }
 
-  let grade = ("Number of Correct Answers") / ("Number of Quiz Questions") * 100;
+  let grade = ((numberCorrect) / (correctAnswers.length)) * 100;
   
   return grade;
 }

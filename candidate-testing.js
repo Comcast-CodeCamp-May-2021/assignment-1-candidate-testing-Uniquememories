@@ -32,7 +32,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log(`Candidate Name: ${candidateName}\n`);
+console.log(`Candidate Name: ${candidateName}`);
 
   for (let i = 0; i < candidateAnswers.length; i++) {
       if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
@@ -54,7 +54,7 @@ if ((numberCorrect / candidateAnswers.length * 100) >= 80) {
     console.log(">>> Status: FAILED <<<");
 }
 
-  let grade = ('Number of Correct Answers') / ('Number of Quiz Questions') * 100;
+  let grade = ("Number of Correct Answers") / ("Number of Quiz Questions") * 100;
   
   return grade;
 }
